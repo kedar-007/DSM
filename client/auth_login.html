@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="icon" href="https://medicare-dashboard-template.multipurposethemes.com/bs5/images/favicon.ico" />
+
+  <title>Dentisti</title>
+
+  <!-- Vendors Style-->
+  <link rel="stylesheet" href="./css/vendors_css.css" />
+
+  <!-- Style-->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/skin_color.css" />
+
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      align-items: center;
+      background-color: #1d1f20;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .blurred {
+      filter: blur(8px);
+      pointer-events: none;
+    }
+
+    .loader {
+      display: none;
+      animation: rotate 1s infinite;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .loader:before,
+    .loader:after {
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 20px;
+      width: 20px;
+    }
+
+    .loader:before {
+      animation: ball1 1s infinite;
+      background-color: #cb2025;
+      box-shadow: 30px 0 0 #f8b334;
+      margin-bottom: 10px;
+    }
+
+    .loader:after {
+      animation: ball2 1s infinite;
+      background-color: #00a096;
+      box-shadow: 30px 0 0 #97bf0d;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg) scale(0.8);
+      }
+
+      50% {
+        transform: rotate(360deg) scale(1.2);
+      }
+
+      100% {
+        transform: rotate(720deg) scale(0.8);
+      }
+    }
+
+    @keyframes ball1 {
+      0% {
+        box-shadow: 30px 0 0 #f8b334;
+      }
+
+      50% {
+        box-shadow: 0 0 0 #f8b334;
+        margin-bottom: 0;
+        transform: translate(15px, 15px);
+      }
+
+      100% {
+        box-shadow: 30px 0 0 #f8b334;
+        margin-bottom: 10px;
+      }
+    }
+
+    @keyframes ball2 {
+      0% {
+        box-shadow: 30px 0 0 #97bf0d;
+      }
+
+      50% {
+        box-shadow: 0 0 0 #97bf0d;
+        margin-top: -20px;
+        transform: translate(15px, 15px);
+      }
+
+      100% {
+        box-shadow: 30px 0 0 #97bf0d;
+        margin-top: 0;
+      }
+    }
+
+    .eye-icon {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body class="hold-transition theme-primary bg-img" style="background-image: url(./images/auth-bg/bg-16.jpg)">
+  <div class="container h-p100 blur-content">
+    <div class="row align-items-center justify-content-md-center h-p100">
+      <div class="col-12">
+        <div class="row justify-content-center g-0">
+          <div class="col-lg-5 col-md-5 col-12">
+            <div class="bg-white rounded10 shadow-lg">
+              <div class="content-top-agile p-20 pb-0">
+                <h2 class="text-primary fw-600">Welcome, Dentisti</h2>
+                <p class="mb-0 text-fade">Sign in to continue to Dentisti app.</p>
+              </div>
+              <div class="p-40">
+                <form id="loginForm">
+                  <div class="form-group">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text bg-transparent"><i class="text-fade ti-user"></i></span>
+                      <input type="text" class="form-control ps-15 bg-transparent" placeholder="Email" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text bg-transparent"><i class="text-fade ti-lock"></i></span>
+                      <input type="password" class="form-control ps-15 bg-transparent" id="passwordInput"
+                        placeholder="Password" />
+                      <span class="input-group-text bg-transparent eye-icon" onclick="togglePassword()">
+                        <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-eye" viewBox="0 0 16 16">
+                          <path
+                            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+                          <path
+                            d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="checkbox">
+                        <input type="checkbox" id="basic_checkbox_1" />
+                        <label for="basic_checkbox_1">Remember Me</label>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="fog-pwd text-end">
+                        <a href="javascript:void(0)" class="text-primary fw-500 hover-primary"><i
+                            class="ion ion-locked"></i> Forgot pwd?</a><br />
+                      </div>
+                    </div>
+                    <div class="col-12 text-center">
+                      <button type="submit" class="btn btn-primary w-p100 mt-10">SIGN IN</button>
+                    </div>
+                  </div>
+                </form>
+                <!-- <div class="text-center">
+                  <p class="mt-15 mb-0 text-fade">Don't have an account? <a href="auth_register.html"
+                      class="text-primary ms-5">Sign Up</a></p>
+                </div>
+                <div class="text-center">
+                  <p class="mt-20 text-fade">- Sign With -</p>
+                  <p class="gap-items-2 mb-0">
+                    <a class="waves-effect waves-circle btn btn-social-icon btn-circle btn-facebook-light" href="#"><i
+                        class="fa fa-facebook"></i></a>
+                    <a class="waves-effect waves-circle btn btn-social-icon btn-circle btn-twitter-light" href="#"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+                    <a class="waves-effect waves-circle btn btn-social-icon btn-circle btn-instagram-light" href="#"><i
+                        class="fa fa-instagram"></i></a>
+                  </p>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="loader"></div>
+
+  <!-- Vendor JS -->
+  <script src="./js/vendors.min.js"></script>
+  <script src="./js/pages/chat-popup.js"></script>
+  <script src="./assets/icons/feather-icons/feather.min.js"></script>
+  <script src="./assets/vendor_components/sweetalert/sweetalert.min.js"></script>
+  <script src="./js/admin/login.js"></script>
+
+  <!-- Toggle Password Visibility -->
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById('passwordInput');
+      const eyeIcon = document.getElementById('eyeIcon');
+
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        eyeIcon.setAttribute("class", "bi bi-eye-slash");
+      } else {
+        passwordInput.type = 'password';
+        eyeIcon.setAttribute("class", "bi bi-eye");
+      }
+    }
+  </script>
+</body>
+
+</html>

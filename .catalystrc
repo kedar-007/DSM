@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "8620000000014001",
+      "name": "DMS",
+      "domain": {
+        "id": "50022257178",
+        "name": "dms-60031503247.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60031503247",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+[debug] [2024-09-14T09:07:09.872Z] : 
+[debug] [2024-09-14T09:07:09.874Z] : ----------------------------------------------------------------------
+[debug] [2024-09-14T09:07:09.874Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\kedar\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js serve
+[debug] [2024-09-14T09:07:09.874Z] : CLI Version:  1.17.5
+[debug] [2024-09-14T09:07:09.874Z] : Platform:     win32
+[debug] [2024-09-14T09:07:09.874Z] : Node Version: v20.15.1
+[debug] [2024-09-14T09:07:09.875Z] : Time:         Sat Sep 14 2024 14:37:09 GMT+0530 (India Standard Time)
+[debug] [2024-09-14T09:07:09.875Z] : ----------------------------------------------------------------------
+[debug] [2024-09-14T09:07:09.875Z] : 
+[debug] [2024-09-14T09:07:10.345Z] : > authorizing via signed-in user option
+[debug] [2024-09-14T09:07:10.345Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
+[debug] [2024-09-14T09:07:10.353Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/8620000000014001 
+
+[debug] [2024-09-14T09:07:10.513Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 14 Sep 2024 09:07:10 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/","ZD_CSRF_TOKEN=cd25b05b-f2ec-4027-bff8-0fb7ff6aa0ff;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=cd25b05b-f2ec-4027-bff8-0fb7ff6aa0ff;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-09-14T09:07:10.517Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/8620000000014001/environment 
+
+[debug] [2024-09-14T09:07:10.571Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 14 Sep 2024 09:07:10 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/","ZD_CSRF_TOKEN=a990b82d-6ed6-48e6-82be-5c7cd70118f7;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a990b82d-6ed6-48e6-82be-5c7cd70118f7;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-09-14T09:07:10.926Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
+[debug] [2024-09-14T09:07:10.935Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/8620000000014001/function 
+Query params: {"type":"basicio,event,cron,applogic,integration,browser_logic"}
+
+[debug] [2024-09-14T09:07:10.946Z] : http port : '3050' is not available. Hence port '3052' will be used instead.
+[debug] [2024-09-14T09:07:10.993Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Sat, 14 Sep 2024 09:07:11 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/","ZD_CSRF_TOKEN=5802e784-5d43-432c-9eea-f587655e1c10;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=5802e784-5d43-432c-9eea-f587655e1c10;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-09-14T09:07:10.995Z] : unknown eol undefined hence skipping check
+[debug] [2024-09-14T09:07:11.201Z] : http port : '3010' is not available. Hence port '3011' will be used instead.
+[info] [2024-09-14T09:07:11.373Z] : 
+[info] [2024-09-14T09:07:11.374Z] :  >>>>>>>>>>>>> AdvancedIO <<<<<<<<<<<< 
+[info] [2024-09-14T09:07:11.375Z] : i dms_function: http://localhost:3001/server/dms_function/
+[info] [2024-09-14T09:07:11.375Z] : 
+[info] [2024-09-14T09:07:11.376Z] : 
+[info] [2024-09-14T09:07:11.376Z] :  >>>>>>>>>>>>> Web Client <<<<<<<<<<<<
+[info] [2024-09-14T09:07:11.376Z] : i client[DMS]: http://localhost:3001/app/
+[info] [2024-09-14T09:07:11.377Z] : 
+[error] [2024-09-14T09:07:14.815Z] : × [404 - Resource not found]: /css/assets/vndor_components/fullcalendar/fullcalendar.print.min.css
+[info] [2024-09-14T09:07:14.816Z] : 
+[debug] [2024-09-14T09:07:14.816Z] : Error: ENOENT: no such file or directory, stat 'C:\Hacathon2\client\css\assets\vndor_components\fullcalendar\fullcalendar.print.min.css'
+[error] [2024-09-14T09:07:17.734Z] : × [404 - Resource not found]: /js/pages/dashboard.js
+[info] [2024-09-14T09:07:17.735Z] : 
+[debug] [2024-09-14T09:07:17.736Z] : Error: ENOENT: no such file or directory, stat 'C:\Hacathon2\client\js\pages\dashboard.js'
+[error] [2024-09-14T09:07:26.054Z] : × [404 - Resource not found]: /css/custom/admin_patients.css
+[info] [2024-09-14T09:07:26.055Z] : 
+[debug] [2024-09-14T09:07:26.055Z] : Error: ENOENT: no such file or directory, stat 'C:\Hacathon2\client\css\custom\admin_patients.css'
+[error] [2024-09-14T09:07:28.652Z] : × [404 - Resource not found]: /css/assets/vndor_components/fullcalendar/fullcalendar.print.min.css
+[info] [2024-09-14T09:07:28.653Z] : 
+[debug] [2024-09-14T09:07:28.653Z] : Error: ENOENT: no such file or directory, stat 'C:\Hacathon2\client\css\assets\vndor_components\fullcalendar\fullcalendar.print.min.css'
+[error] [2024-09-14T09:07:31.228Z] : × [404 - Resource not found]: /js/pages/dashboard.js
+[info] [2024-09-14T09:07:31.229Z] : 
+[debug] [2024-09-14T09:07:31.229Z] : Error: ENOENT: no such file or directory, stat 'C:\Hacathon2\client\js\pages\dashboard.js'
+[debug] [2024-09-14T09:07:31.483Z] : >>>> HTTP REQUEST : GET https://dms-60031503247.development.catalystserverless.in/baas/v1/project/8620000000014001/project-user/current 
+
+[debug] [2024-09-14T09:07:31.627Z] : <<<< HTTP RESPONSE : 401
+Response Headers: {"server":"ZGS","date":"Sat, 14 Sep 2024 09:07:31 GMT","content-type":"application/json;charset=ISO-8859-1","content-length":"90","connection":"keep-alive","x-content-type-options":"nosniff","x-xss-protection":"1","set-cookie":["ZD_CSRF_TOKEN=67ef4597-c83a-45e0-bd05-6bfefc0d4b97;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=67ef4597-c83a-45e0-bd05-6bfefc0d4b97;path=/;SameSite=Strict;Secure;priority=high"],"cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-09-14T09:07:31.628Z] : Response Body : {"status":"failure","data":{"error_code":"INVALID_TOKEN","message":"invalid oauth token"}}
+
+[error] [2024-09-14T09:07:36.069Z] : × [404 - Resource not found]: /css/assets/vndor_components/fullcalendar/fullcalendar.print.min.css
+[info] [2024-09-14T09:07:36.070Z] : 
+[debug] [2024-09-14T09:07:36.071Z] : Error: ENOENT: no such file or directory, stat 'C:\Hacathon2\client\css\assets\vndor_components\fullcalendar\fullcalendar.print.min.css'
+[error] [2024-09-14T09:07:39.073Z] : × [404 - Resource not found]: /js/pages/dashboard.js
+[info] [2024-09-14T09:07:39.074Z] : 
+[debug] [2024-09-14T09:07:39.075Z] : Error: ENOENT: no such file or directory, stat 'C:\Hacathon2\client\js\pages\dashboard.js'
+[error] [2024-09-14T09:08:11.717Z] : × [404 - Resource not found]: /admin/.catalyst\reload-script.js
+[info] [2024-09-14T09:08:11.717Z] : 
+[debug] [2024-09-14T09:08:11.718Z] : Error: ENOENT: no such file or directory, stat 'C:\Hacathon2\client\admin\.catalyst\reload-script.js'
+[error] [2024-09-14T09:08:14.374Z] : × [404 - Resource not found]: /css/assets/vndor_components/fullcalendar/fullcalendar.print.min.css
+[info] [2024-09-14T09:08:14.376Z] : 
+[debug] [2024-09-14T09:08:14.376Z] : Error: ENOENT: no such file or directory, stat 'C:\Hacathon2\client\css\assets\vndor_components\fullcalendar\fullcalendar.print.min.css'
+[error] [2024-09-14T09:08:19.956Z] : × [404 - Resource not found]: /css/assets/vndor_components/fullcalendar/fullcalendar.print.min.css
+[info] [2024-09-14T09:08:19.957Z] : 
+[debug] [2024-09-14T09:08:19.958Z] : Error: ENOENT: no such file or directory, stat 'C:\Hacathon2\client\css\assets\vndor_components\fullcalendar\fullcalendar.print.min.css'
