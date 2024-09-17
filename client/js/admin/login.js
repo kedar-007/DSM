@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Send the POST request to the backend for login
-    fetch("/server/dental_management_function/login", {
+    fetch("/server/dms_function/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -48,35 +48,46 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json(); // Proceed to parse JSON data if the response is OK
       })
       .then((data) => {
-        // Store user details in local storage if login is successful
-        if (data.userId) {
+        // Store user details in local storage based on the user's role
+        const role = (data.role || "ADMIN").toUpperCase();
+        if (role === "ADMIN") {
           localStorage.setItem("email", data.email);
-          localStorage.setItem("hospitalId", data.hospitalId);
-          localStorage.setItem("role", data.role || "Admin");
-          localStorage.setItem("userId", data.userId);
+          localStorage.setItem("role", data.role);
           localStorage.setItem("userName", data.userName);
-
-          // Show a brief message indicating redirection and then redirect the user
-          swal("Redirecting...", "Please wait while we redirect you.", "info", {
-            buttons: false,
-            timer: 500, // Short delay for redirection message
-          });
-
-          // Redirect the user based on their role after a brief delay
-          const role = (data.role || "Admin").toUpperCase();
-          setTimeout(() => {
-            if (role === "DOCTOR") {
-              window.location.href = "./doctor/index.html";
-            } else if (role === "RECEPTIONIST") {
-              window.location.href = "./receptionist/index.html";
-            } else {
-              window.location.href = "./admin/index.html"; // Default redirection to 'admin' page
-            }
-          }, 100); // Short delay before redirect
+        } else if (role === "DEALER") {
+          localStorage.setItem("email", data.email);
+          localStorage.setItem("role", data.role);
+          localStorage.setItem("dealerId", data.dealerId);
+          localStorage.setItem("userName", data.userName);
+        } else if (role === "TECHNICIAN") {
+          localStorage.setItem("email", data.email);
+          localStorage.setItem("role", data.role);
+          localStorage.setItem("dealerId", data.dealerId);
+          localStorage.setItem("userName", data.userName);
+          localStorage.setItem("technicianId", data.technicianId);
         } else {
-          // Display error if credentials are invalid
-          swal("Error", "Invalid credentials, please try again.", "error");
+          // Default storage for other roles if needed
+          localStorage.setItem("email", data.email);
+          localStorage.setItem("role", data.role || "Admin");
+          localStorage.setItem("userName", data.userName);
         }
+
+        // Show a brief message indicating redirection and then redirect the user
+        swal("Redirecting...", "Please wait while we redirect you.", "info", {
+          buttons: false,
+          timer: 500, // Short delay for redirection message
+        });
+
+        // Redirect the user based on their role after a brief delay
+        setTimeout(() => {
+          if (role === "DEALER") {
+            window.location.href = "./doctor/index.html";
+          } else if (role === "TECHNICIAN") {
+            window.location.href = "./receptionist/serviceHistory.html";
+          } else {
+            window.location.href = "./admin/index.html"; // Default redirection to 'admin' page
+          }
+        }, 100); // Short delay before redirect
       })
       .catch((error) => {
         // Handle and display error messages based on the error encountered
